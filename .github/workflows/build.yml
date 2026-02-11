@@ -4,8 +4,7 @@ on:
   push:
     branches: ["main"]
   schedule:
-   - cron: "40 11 * * *"   
-
+    - cron: "40 11 * * *"
 
 permissions:
   contents: write
@@ -15,21 +14,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+
       - name: Build docs/index.html
         env:
           PHONE: ${{ secrets.PHONE }}
         run: node build.js
-              - name: Send email with WhatsApp link
+
+      - name: Send email with WhatsApp link
         env:
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
         run: |
-          MSG="$(cat docs/message.txt 2>/dev/null || true)"
-          WA_LINK="$(cat docs/wa_link.txt 2>/dev/null || true)"
+          export MSG="$(cat docs/message.txt 2>/dev/null || true)"
+          export WA_LINK="$(cat docs/wa_link.txt 2>/dev/null || true)"
 
           python3 - << 'PY'
 import os, smtplib
