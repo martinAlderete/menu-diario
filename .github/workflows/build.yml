@@ -15,16 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
+      
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-
+      
       - name: Build docs/index.html
         env:
           PHONE: ${{ secrets.PHONE }}
         run: node build.js
-
+      
       - name: Send email with WhatsApp link
         env:
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
@@ -32,35 +32,35 @@ jobs:
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
         run: |
           python3 - << 'PY'
-import os, smtplib
-from email.message import EmailMessage
-
-email_from = os.environ["EMAIL_FROM"]
-email_to = os.environ["EMAIL_TO"]
-app_pw = os.environ["EMAIL_APP_PASSWORD"]
-
-with open("docs/message.txt", "r", encoding="utf-8") as f:
-    msg_txt = f.read().strip()
-
-with open("docs/wa_link.txt", "r", encoding="utf-8") as f:
-    wa_link = f.read().strip()
-
-subject = "Menú diario listo 🍽️"
-body = f"{msg_txt}\n\nEnviar por WhatsApp:\n{wa_link}\n"
-
-m = EmailMessage()
-m["From"] = email_from
-m["To"] = email_to
-m["Subject"] = subject
-m.set_content(body)
-
-with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
-    s.login(email_from, app_pw)
-    s.send_message(m)
-
-print("Email sent to", email_to)
-PY
-
+          import os, smtplib
+          from email.message import EmailMessage
+          
+          email_from = os.environ["EMAIL_FROM"]
+          email_to = os.environ["EMAIL_TO"]
+          app_pw = os.environ["EMAIL_APP_PASSWORD"]
+          
+          with open("docs/message.txt", "r", encoding="utf-8") as f:
+              msg_txt = f.read().strip()
+          
+          with open("docs/wa_link.txt", "r", encoding="utf-8") as f:
+              wa_link = f.read().strip()
+          
+          subject = "Menú diario listo 🍽️"
+          body = f"{msg_txt}\n\nEnviar por WhatsApp:\n{wa_link}\n"
+          
+          m = EmailMessage()
+          m["From"] = email_from
+          m["To"] = email_to
+          m["Subject"] = subject
+          m.set_content(body)
+          
+          with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
+              s.login(email_from, app_pw)
+              s.send_message(m)
+          
+          print("Email sent to", email_to)
+          PY
+      
       - name: Commit and push docs + state
         run: |
           git config user.name "github-actions[bot]"
