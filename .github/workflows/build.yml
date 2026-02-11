@@ -4,8 +4,8 @@ on:
   push:
     branches: ["main"]
   schedule:
-    # 08:40 Argentina (UTC-3) = 11:40 UTC
-    - cron: "40 11 * * *"
+   
+    - cron: "* * * * *"
 
 permissions:
   contents: write
