@@ -4,6 +4,7 @@ on:
   push:
     branches: ["main"]
   schedule:
+    # 08:40 Argentina (UTC-3) = 11:40 UTC
     - cron: "40 11 * * *"
 
 permissions:
@@ -30,9 +31,6 @@ jobs:
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
         run: |
-          export MSG="$(cat docs/message.txt 2>/dev/null || true)"
-          export WA_LINK="$(cat docs/wa_link.txt 2>/dev/null || true)"
-
           python3 - << 'PY'
 import os, smtplib
 from email.message import EmailMessage
@@ -41,13 +39,14 @@ email_from = os.environ["EMAIL_FROM"]
 email_to = os.environ["EMAIL_TO"]
 app_pw = os.environ["EMAIL_APP_PASSWORD"]
 
-msg_txt = os.environ.get("MSG","").strip()
-wa_link = os.environ.get("WA_LINK","").strip()
+with open("docs/message.txt", "r", encoding="utf-8") as f:
+    msg_txt = f.read().strip()
+
+with open("docs/wa_link.txt", "r", encoding="utf-8") as f:
+    wa_link = f.read().strip()
 
 subject = "Menú diario listo 🍽️"
-body = "Hola!\n\n"
-body += (msg_txt + "\n\n") if msg_txt else ""
-body += ("Enviar por WhatsApp:\n" + wa_link + "\n") if wa_link else ""
+body = f"{msg_txt}\n\nEnviar por WhatsApp:\n{wa_link}\n"
 
 m = EmailMessage()
 m["From"] = email_from
@@ -61,12 +60,11 @@ with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
 
 print("Email sent to", email_to)
 PY
-        shell: bash
 
       - name: Commit and push docs + state
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/index.html state.json
+          git add docs/index.html docs/message.txt docs/wa_link.txt state.json
           git commit -m "Update daily menu page" || echo "No changes"
           git push
