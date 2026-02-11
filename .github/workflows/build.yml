@@ -1,0 +1,30 @@
+name: build-menu-page
+
+on:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: "0 12 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Build docs/index.html
+        env:
+          PHONE: ${{ secrets.PHONE }}
+        run: node build.js
+      - name: Commit and push docs + state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html state.json
+          git commit -m "Update daily menu page" || echo "No changes"
+          git push

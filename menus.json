@@ -1,0 +1,233 @@
+{
+  "A": {
+    "LUNES": [
+      {
+        "title": "Pollo a la plancha + ensalada",
+        "protein": [
+          "pollo"
+        ],
+        "veg": [
+          "lechuga",
+          "tomate",
+          "cebolla"
+        ]
+      },
+      {
+        "title": "Huevos revueltos + ensalada",
+        "protein": [
+          "huevos"
+        ],
+        "veg": [
+          "tomate",
+          "zanahoria"
+        ]
+      },
+      {
+        "title": "Carne magra + verduras salteadas",
+        "protein": [
+          "carne"
+        ],
+        "veg": [
+          "zapallito",
+          "cebolla"
+        ]
+      }
+    ],
+    "MARTES": [
+      {
+        "title": "Carne magra + ensalada",
+        "protein": [
+          "carne"
+        ],
+        "veg": [
+          "lechuga",
+          "tomate"
+        ]
+      },
+      {
+        "title": "Pollo al horno + ensalada",
+        "protein": [
+          "pollo"
+        ],
+        "veg": [
+          "zanahoria",
+          "cebolla"
+        ]
+      },
+      {
+        "title": "Huevos + verduras salteadas",
+        "protein": [
+          "huevos"
+        ],
+        "veg": [
+          "morrón",
+          "cebolla"
+        ]
+      }
+    ],
+    "MIERCOLES": [
+      {
+        "title": "Huevos + ensalada",
+        "protein": [
+          "huevos"
+        ],
+        "veg": [
+          "tomate",
+          "zanahoria"
+        ]
+      },
+      {
+        "title": "Carne magra + verduras",
+        "protein": [
+          "carne"
+        ],
+        "veg": [
+          "zapallito",
+          "cebolla"
+        ]
+      },
+      {
+        "title": "Pollo a la plancha + ensalada",
+        "protein": [
+          "pollo"
+        ],
+        "veg": [
+          "lechuga",
+          "tomate"
+        ]
+      }
+    ],
+    "JUEVES": [
+      {
+        "title": "Pollo al horno + verduras",
+        "protein": [
+          "pollo"
+        ],
+        "veg": [
+          "zanahoria",
+          "cebolla"
+        ]
+      },
+      {
+        "title": "Huevos + ensalada",
+        "protein": [
+          "huevos"
+        ],
+        "veg": [
+          "tomate",
+          "pepino"
+        ]
+      },
+      {
+        "title": "Carne magra + ensalada",
+        "protein": [
+          "carne"
+        ],
+        "veg": [
+          "lechuga",
+          "tomate"
+        ]
+      }
+    ]
+  },
+  "B": {
+    "VIERNES": [
+      {
+        "title": "Carne magra + ensalada grande",
+        "protein": [
+          "carne"
+        ],
+        "veg": [
+          "lechuga",
+          "tomate",
+          "cebolla"
+        ]
+      },
+      {
+        "title": "Pollo a la plancha + verduras",
+        "protein": [
+          "pollo"
+        ],
+        "veg": [
+          "zapallito",
+          "zanahoria"
+        ]
+      },
+      {
+        "title": "Cerdo magro + ensalada",
+        "protein": [
+          "cerdo"
+        ],
+        "veg": [
+          "lechuga",
+          "tomate"
+        ]
+      }
+    ],
+    "SABADO": [
+      {
+        "title": "Pollo al horno + ensalada",
+        "protein": [
+          "pollo"
+        ],
+        "veg": [
+          "zanahoria",
+          "cebolla"
+        ]
+      },
+      {
+        "title": "Huevos + verduras salteadas",
+        "protein": [
+          "huevos"
+        ],
+        "veg": [
+          "morrón",
+          "cebolla"
+        ]
+      },
+      {
+        "title": "Cerdo magro + verduras",
+        "protein": [
+          "cerdo"
+        ],
+        "veg": [
+          "zapallito",
+          "cebolla"
+        ]
+      }
+    ],
+    "DOMINGO": [
+      {
+        "title": "Carne magra + ensalada",
+        "protein": [
+          "carne"
+        ],
+        "veg": [
+          "lechuga",
+          "tomate"
+        ]
+      },
+      {
+        "title": "Pollo + ensalada grande",
+        "protein": [
+          "pollo"
+        ],
+        "veg": [
+          "lechuga",
+          "tomate",
+          "zanahoria"
+        ]
+      },
+      {
+        "title": "Huevos + ensalada",
+        "protein": [
+          "huevos"
+        ],
+        "veg": [
+          "tomate",
+          "zanahoria"
+        ]
+      }
+    ]
+  }
+}
