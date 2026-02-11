@@ -140,4 +140,8 @@ const html = `<!doctype html>
 
 fs.mkdirSync("docs", { recursive: true });
 fs.writeFileSync("docs/index.html", html, "utf8");
+fs.writeFileSync("docs/message.txt", msg, "utf8");
+fs.writeFileSync("docs/wa_link.txt", waLink, "utf8");
+
 console.log("Generated docs/index.html for:", dayName, fecha, "Set:", setKey);
+

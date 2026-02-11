@@ -4,7 +4,8 @@ on:
   push:
     branches: ["main"]
   schedule:
-    - cron: "0 12 * * *"
+   - cron: "40 11 * * *"   
+
 
 permissions:
   contents: write
@@ -21,6 +22,45 @@ jobs:
         env:
           PHONE: ${{ secrets.PHONE }}
         run: node build.js
+              - name: Send email with WhatsApp link
+        env:
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+        run: |
+          MSG="$(cat docs/message.txt 2>/dev/null || true)"
+          WA_LINK="$(cat docs/wa_link.txt 2>/dev/null || true)"
+
+          python3 - << 'PY'
+import os, smtplib
+from email.message import EmailMessage
+
+email_from = os.environ["EMAIL_FROM"]
+email_to = os.environ["EMAIL_TO"]
+app_pw = os.environ["EMAIL_APP_PASSWORD"]
+
+msg_txt = os.environ.get("MSG","").strip()
+wa_link = os.environ.get("WA_LINK","").strip()
+
+subject = "Menú diario listo 🍽️"
+body = "Hola!\n\n"
+body += (msg_txt + "\n\n") if msg_txt else ""
+body += ("Enviar por WhatsApp:\n" + wa_link + "\n") if wa_link else ""
+
+m = EmailMessage()
+m["From"] = email_from
+m["To"] = email_to
+m["Subject"] = subject
+m.set_content(body)
+
+with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
+    s.login(email_from, app_pw)
+    s.send_message(m)
+
+print("Email sent to", email_to)
+PY
+        shell: bash
+
       - name: Commit and push docs + state
         run: |
           git config user.name "github-actions[bot]"
