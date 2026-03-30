@@ -5,7 +5,7 @@ on:
     branches: ["main"]
   schedule:
    
-    - cron: "40 11 * * *"
+   cron: "* * * * *"
 
 permissions:
   contents: write
