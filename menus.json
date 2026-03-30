@@ -2,231 +2,144 @@
   "A": {
     "LUNES": [
       {
-        "title": "Pollo a la plancha + ensalada",
-        "protein": [
-          "pollo"
-        ],
-        "veg": [
-          "lechuga",
-          "tomate",
-          "cebolla"
-        ]
+        "title": "Pollo al limón con arroz blanco y ensalada caprese",
+        "protein": ["pollo"],
+        "carbs": ["arroz blanco"],
+        "veg": ["tomate", "albahaca"]
       },
       {
-        "title": "Huevos revueltos + ensalada",
-        "protein": [
-          "huevos"
-        ],
-        "veg": [
-          "tomate",
-          "zanahoria"
-        ]
+        "title": "Revuelto de huevos con espinaca y fideos integrales salteados",
+        "protein": ["huevos"],
+        "carbs": ["fideos integrales"],
+        "veg": ["espinaca"]
       },
       {
-        "title": "Carne magra + verduras salteadas",
-        "protein": [
-          "carne"
-        ],
-        "veg": [
-          "zapallito",
-          "cebolla"
-        ]
+        "title": "Bife de lomo con arroz al curry y brócoli al vapor",
+        "protein": ["carne"],
+        "carbs": ["arroz"],
+        "veg": ["brócoli"]
       }
     ],
     "MARTES": [
       {
-        "title": "Carne magra + ensalada",
-        "protein": [
-          "carne"
-        ],
-        "veg": [
-          "lechuga",
-          "tomate"
-        ]
+        "title": "Milanesa de pollo al horno con puré de zapallo",
+        "protein": ["pollo"],
+        "carbs": [],
+        "veg": ["zapallo"]
       },
       {
-        "title": "Pollo al horno + ensalada",
-        "protein": [
-          "pollo"
-        ],
-        "veg": [
-          "zanahoria",
-          "cebolla"
-        ]
+        "title": "Carne magra estofada con fideos cortos y zanahoria",
+        "protein": ["carne"],
+        "carbs": ["fideos cortos"],
+        "veg": ["zanahoria", "cebolla"]
       },
       {
-        "title": "Huevos + verduras salteadas",
-        "protein": [
-          "huevos"
-        ],
-        "veg": [
-          "morrón",
-          "cebolla"
-        ]
+        "title": "Tortilla de huevos con arroz y verduras salteadas",
+        "protein": ["huevos"],
+        "carbs": ["arroz"],
+        "veg": ["morrón", "cebolla"]
       }
     ],
     "MIERCOLES": [
       {
-        "title": "Huevos + ensalada",
-        "protein": [
-          "huevos"
-        ],
-        "veg": [
-          "tomate",
-          "zanahoria"
-        ]
+        "title": "Pechuga al horno con arroz yamaní y espárragos",
+        "protein": ["pollo"],
+        "carbs": ["arroz yamaní"],
+        "veg": ["espárragos"]
       },
       {
-        "title": "Carne magra + verduras",
-        "protein": [
-          "carne"
-        ],
-        "veg": [
-          "zapallito",
-          "cebolla"
-        ]
+        "title": "Carne al horno con fideos al pesto de albahaca",
+        "protein": ["carne"],
+        "carbs": ["fideos"],
+        "veg": ["albahaca", "tomate cherry"]
       },
       {
-        "title": "Pollo a la plancha + ensalada",
-        "protein": [
-          "pollo"
-        ],
-        "veg": [
-          "lechuga",
-          "tomate"
-        ]
+        "title": "Omelette de verduras con tostadas integrales",
+        "protein": ["huevos"],
+        "carbs": [],
+        "veg": ["morrón", "champiñones", "cebolla"]
       }
     ],
     "JUEVES": [
       {
-        "title": "Pollo al horno + verduras",
-        "protein": [
-          "pollo"
-        ],
-        "veg": [
-          "zanahoria",
-          "cebolla"
-        ]
+        "title": "Pollo al vino blanco con arroz basmati y chauchas",
+        "protein": ["pollo"],
+        "carbs": ["arroz basmati"],
+        "veg": ["chauchas"]
       },
       {
-        "title": "Huevos + ensalada",
-        "protein": [
-          "huevos"
-        ],
-        "veg": [
-          "tomate",
-          "pepino"
-        ]
+        "title": "Lomo salteado con arroz blanco y cebolla",
+        "protein": ["carne"],
+        "carbs": ["arroz blanco"],
+        "veg": ["tomate", "cebolla"]
       },
       {
-        "title": "Carne magra + ensalada",
-        "protein": [
-          "carne"
-        ],
-        "veg": [
-          "lechuga",
-          "tomate"
-        ]
+        "title": "Huevos pochados con fideos de arroz y zapallito",
+        "protein": ["huevos"],
+        "carbs": ["fideos de arroz"],
+        "veg": ["zapallito", "zanahoria"]
       }
     ]
   },
   "B": {
     "VIERNES": [
       {
-        "title": "Carne magra + ensalada grande",
-        "protein": [
-          "carne"
-        ],
-        "veg": [
-          "lechuga",
-          "tomate",
-          "cebolla"
-        ]
+        "title": "Carne al chimichurri con arroz largo y ensalada mixta",
+        "protein": ["carne"],
+        "carbs": ["arroz largo"],
+        "veg": ["lechuga", "tomate", "cebolla"]
       },
       {
-        "title": "Pollo a la plancha + verduras",
-        "protein": [
-          "pollo"
-        ],
-        "veg": [
-          "zapallito",
-          "zanahoria"
-        ]
+        "title": "Pollo grillado con fideos integrales y pimientos asados",
+        "protein": ["pollo"],
+        "carbs": ["fideos integrales"],
+        "veg": ["morrón"]
       },
       {
-        "title": "Cerdo magro + ensalada",
-        "protein": [
-          "cerdo"
-        ],
-        "veg": [
-          "lechuga",
-          "tomate"
-        ]
+        "title": "Cerdo al romero con papas al horno y ensalada",
+        "protein": ["cerdo"],
+        "carbs": [],
+        "veg": ["papa", "lechuga"]
       }
     ],
     "SABADO": [
       {
-        "title": "Pollo al horno + ensalada",
-        "protein": [
-          "pollo"
-        ],
-        "veg": [
-          "zanahoria",
-          "cebolla"
-        ]
+        "title": "Pollo al horno con limón, arroz con hierbas y zanahoria glaseada",
+        "protein": ["pollo"],
+        "carbs": ["arroz con hierbas"],
+        "veg": ["zanahoria"]
       },
       {
-        "title": "Huevos + verduras salteadas",
-        "protein": [
-          "huevos"
-        ],
-        "veg": [
-          "morrón",
-          "cebolla"
-        ]
+        "title": "Costillitas de cerdo al horno con fideos largos y brócoli",
+        "protein": ["cerdo"],
+        "carbs": ["fideos largos"],
+        "veg": ["brócoli"]
       },
       {
-        "title": "Cerdo magro + verduras",
-        "protein": [
-          "cerdo"
-        ],
-        "veg": [
-          "zapallito",
-          "cebolla"
-        ]
+        "title": "Frittata de huevos con fideos de arroz y hongos",
+        "protein": ["huevos"],
+        "carbs": ["fideos de arroz"],
+        "veg": ["hongos", "cebolla"]
       }
     ],
     "DOMINGO": [
       {
-        "title": "Carne magra + ensalada",
-        "protein": [
-          "carne"
-        ],
-        "veg": [
-          "lechuga",
-          "tomate"
-        ]
+        "title": "Carne a la pizza con arroz yamaní y ensalada de rúcula",
+        "protein": ["carne"],
+        "carbs": ["arroz yamaní"],
+        "veg": ["rúcula", "tomate cherry"]
       },
       {
-        "title": "Pollo + ensalada grande",
-        "protein": [
-          "pollo"
-        ],
-        "veg": [
-          "lechuga",
-          "tomate",
-          "zanahoria"
-        ]
+        "title": "Pollo al horno con papas rústicas y ensalada griega",
+        "protein": ["pollo"],
+        "carbs": [],
+        "veg": ["papa", "tomate", "pepino", "aceitunas"]
       },
       {
-        "title": "Huevos + ensalada",
-        "protein": [
-          "huevos"
-        ],
-        "veg": [
-          "tomate",
-          "zanahoria"
-        ]
+        "title": "Huevos revueltos con fideos saltados y espinaca",
+        "protein": ["huevos"],
+        "carbs": ["fideos"],
+        "veg": ["espinaca"]
       }
     ]
   }
