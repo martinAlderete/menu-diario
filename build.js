@@ -68,12 +68,15 @@ function buildMessage(plans) {
   lines.push("");
   lines.push("🍽️ Almuerzo fit (½ proteína + ½ verduras):");
 
-  function fmt(label, o) {
+   function fmt(label, o) {
     if (!o) return null;
     const prot = (o.protein||[]).join(", ");
+    const carbs = (o.carbs||[]).join(", ");
     const veg = (o.veg||[]).join(", ");
-    return `✅ ${label}: ${o.title}\n🥩 Proteína: ${prot}\n🥦 Verduras: ${veg}`;
+    const carbLine = carbs ? `\n🍚 Acompañamiento: ${carbs}` : "";
+    return `✅ ${label}: ${o.title}\n🥩 Proteína: ${prot}${carbLine}\n🥦 Verduras: ${veg}`;
   }
+
 
   lines.push(fmt("Plan A", A));
   if (B) { lines.push(""); lines.push(fmt("Plan B", B)); }
